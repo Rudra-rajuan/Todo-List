@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddTodo from "../components/todo/AddTodo";
+import TodoList from "../components/todo/TodoList";
 
 function TodoPage() {
   const [todos, setTodos] = useState([]);
@@ -17,7 +18,7 @@ function TodoPage() {
     <div>
       <h1>Todo List</h1>
       <AddTodo onAddTodo={handleAddTodo} />
-      {/* ... other todo list components */}
+      <TodoList todos={todos} />
     </div>
   );
 }
